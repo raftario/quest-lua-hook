@@ -1,0 +1,19 @@
+[package]
+name = "quest-lua-hook"
+version = "0.1.0"
+authors = ["Raphaël Thériault <self@raftar.io>"]
+edition = "2018"
+
+[package.metadata.ndk]
+targets = ["arm64-v8a"]
+platform = 24
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+tracing = "0.1"
+
+[dependencies.quest_hook]
+git = "https://github.com/StackDoubleFlow/quest-hook-rs.git"
+features = ["unity2019"]
