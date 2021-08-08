@@ -1,6 +1,7 @@
-#![feature(asm, naked_functions)]
+#![feature(asm, naked_functions, thread_local)]
 #![allow(clippy::missing_safety_doc)]
 
+#[thread_local]
 static mut HOOKED: u64 = 0;
 
 #[naked]
